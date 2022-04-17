@@ -59,57 +59,70 @@
 	padding-right: 2%;
 }
 .content{
-	min-height: 800px;
+	min-height: 300px;
 	width: 100%;
-	height: 70vh;
-	overflow: scroll;
-	overflow-x: hidden;
+	height: 67vh;
+	overflow: hidden;
 	background-color: #333533;
-	text-align: center;
-}
-.content::-webkit-scrollbar{
-	display: none;
 }
 .content h2{
-	margin-top: 2.5vh;
-	text-align: center;
+	margin-left: 10px;
 	text-decoration: none;
 	color: #F5CB5C;
-	font-size: 45px;
+	font-size: 4vw;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
 }
 .content h3{
-	margin-top: 2vh;
-	margin-left: 3vw;
-	margin-right: 3vw;
+	margin-left: 10px;
 	text-decoration: none;
 	color: #F5CB5C;
-	font-size: 19px;
-	font-family: "Open Sans", sans-serif;
-	font-weight: 600;
+ 	font-size: 3vw;
+  	font-family: "Open Sans", sans-serif;
+ 	font-weight: 800;
 }
-.content h3 nav a{
-	text-decoration: none;
-	color: #F5CB5C;
-	font-size: 19px;
-	font-family: "Open Sans", sans-serif;
-	font-weight: 600;
-}
-.content h3 nav a:hover{
-	color: #ff5ea2;
-}
-.content h4{
-	margin-top: 2vh;
+.register-form{
+	margin-left: 2vw;
+	max-width: 28vw;
+	width: 100%;
+	min-width: 300px;
+	flex-direction: column;
+	display: inline-flex;
+	align-items: center;
+	background-color: #242423;
+	border-radius: 25px;
 	text-align: center;
-	text-decoration: none;
-	color: #F5CB5C;
-	font-size: 60px;
-	font-family: "Open Sans", sans-serif;
-	font-weight: 600;
 }
-.list-button input{
-	margin-top: 30px;
+.register-form .title{
+ 	font-size: 25px;
+ 	font-family: "Open Sans", sans-serif;
+ 	font-weight: 500;
+	color: #F5CB5C;
+}
+.register-form .input-box{
+	text-align: center;
+	flex-direction: column;
+}
+.register-form .input-box input{
+	font-size: 16px;
+	width: 20vw;
+	min-width: 200px;
+
+	background-color: #333533;
+	display: inline-block;
+	align-items: center;
+	vertical-align: center;
+	border-bottom: 0.5px solid gray;
+	border-radius: 25px;
+}
+.register-form .input-box input, select, textarea{
+	color: #F5CB5C;
+	padding: 10px;
+}
+.register-form .input-box img{
+	vertical-align: middle;
+}
+.register-form  .submit input{
 	color:#242423;
 	background-color:#f5cb5c;
 	height: 40px;
@@ -117,8 +130,23 @@
 	font-size: 25px;
 	padding: 0;
 }
-@media screen and (max-width: 1320px){
-
+.pahar{
+	width: 30%;
+	min-width: 370px;
+	position: absolute;
+	right: 5vh;
+	bottom: 20vh;
+	overflow: hidden;
+}
+@media screen and (max-height: 800px){
+	.content .pahar {display: none}
+}
+@media screen and (max-width: 700px){
+	.content .pahar{bottom: 0px}
+}
+@media screen and (max-height: 550px){
+	.content h2{display: none}
+	.content h3{display: none}
 }
 .botnav{
 	min-height: 120px;
