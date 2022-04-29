@@ -112,10 +112,16 @@
 	margin-top: 30px;
 	color:#242423;
 	background-color:#f5cb5c;
-	height: 40px;
-	border-radius: 25px;
-	font-size: 25px;
+	height: 85px;
+	border-radius: 50px;
+	font-size: 35px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
 	padding: 0;
+}
+
+.list-button input:hover{
+	color: #68747c;
 }
 @media screen and (max-width: 1320px){
 

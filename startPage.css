@@ -94,10 +94,12 @@
 	.content img {display: none}
 }
 .block{
+	width: 32vw;
+	height: 10vw;
 	margin-left: 15vw;
+	border-radius: 50px;
 	background-color: #F5CB5C;
 	color: #333533;
-	border-radius: 30 px;
 }
 
 .block p{
@@ -105,6 +107,7 @@
  	font-family: "Open Sans", sans-serif;
   	font-weight: 800;
 }
+
 @media screen and (max-height: 450px){
 	.content h2{display: none}
 	.content h3{display: none}
