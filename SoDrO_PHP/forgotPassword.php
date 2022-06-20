@@ -8,7 +8,7 @@
 				<h4>Forgot password?</h4>
                 <h5> Introduce your valid email account so we can send your account information
                     and all the steps required to reset your password. </h5>
-				<form class="input-boxes" action="includes/login-inc.php" method="post">
+				<form class="input-boxes" action="includes/forgot-password-inc.php" method="post">
 					<div class="input-box">
 						<img src="images/email_logo.png" class="reg-logo">
 						<input type="text" name="uid" placeholder=" Email address" required>

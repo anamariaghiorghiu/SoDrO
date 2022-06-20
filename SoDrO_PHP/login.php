@@ -15,7 +15,7 @@
 						<img src="images/pass_logo.png" class="reg-logo">
 						<input type="password" name= "pwd" placeholder=" Password" required>
 					</div>
-					<div class="forgot-password"><a href="forgot_pasword.html">Forgot password?</a></div>
+					<div class="forgot-password"><a href="forgotPassword.php">Forgot password?</a></div>
 						<button class="submit-button" name="submit" type="submit">Log me in!</button>
 				</form>
 
