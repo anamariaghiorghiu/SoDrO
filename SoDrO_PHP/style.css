@@ -359,6 +359,110 @@
 	.loginContent h3{display: none}
 }
 
+.forgot-password-content{
+	min-height: 300px;
+	width: 100%;
+	height: 67vh;
+	overflow: hidden;
+	background-color: #333533;
+}
+.forgot-password-content h2{
+	margin-left: 10px;
+	text-decoration: none;
+	color: #F5CB5C;
+	font-size: 4vw;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+}
+.forgot-password-content h3{
+	margin-left: 10px;
+	text-decoration: none;
+	color: #F5CB5C;
+ 	font-size: 3vw;
+  	font-family: "Open Sans", sans-serif;
+ 	font-weight: 800;
+}
+.forgot-password-form{
+	margin-left: 2vw;
+	max-width: 28vw;
+	width: 100%;
+	min-width: 300px;
+	height: 250px;
+	flex-direction: column;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #242423;
+	border-radius: 25px;
+	text-align: center;
+}
+.forgot-password-form h4{
+ 	font-size: 25px;
+ 	font-family: "Open Sans", sans-serif;
+ 	font-weight: 500;
+	margin-bottom: 1vw;
+	color: #F5CB5C;
+}
+.forgot-password-form h5{
+	font-size: 20px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: lighter;
+	text-align: justify;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-bottom: 1vw;
+   	color: #F5CB5C;
+}
+.forgot-password-form .input-box{
+	text-align: center;
+	flex-direction: column;
+}
+.forgot-password-form .input-box input{
+	font-size: 16px;
+	width: 20vw;
+	min-width: 200px;
+	background-color: #333533;
+	display: inline-block;
+	align-items: center;
+	vertical-align: center;
+	border-bottom: 0.5px solid gray;
+	border-radius: 25px;
+}
+.forgot-password-form .input-box input{
+	color: #F5CB5C;
+	padding: 10px;
+}
+.forgot-password-form .input-box img{
+	vertical-align: middle;
+}
+.forgot-password-form .submit-button{
+	color:#242423;
+	background-color:#f5cb5c;
+	height: 40px;
+	border-radius: 25px;
+	font-size: 25px;
+	font-weight: bold;
+	padding-inline: 3vw;
+}
+.forgot-password-content .pahar{
+	width: 30%;
+	min-width: 370px;
+	position: absolute;
+	right: 5vh;
+	bottom: 20vh;
+	overflow: hidden;
+}
+@media screen and (max-height: 800px){
+	.forgot-password-content .pahar {display: none}
+}
+@media screen and (max-width: 700px){
+	.forgot-password-content .pahar{bottom: 0px}
+}
+@media screen and (max-height: 550px){
+	.forgot-password-content h2{display: none}
+	.forgot-password-content h3{display: none}
+}
+
 .productsContent{
 	min-height: 240px;
 	width: 100%;
