@@ -2,19 +2,18 @@
 
 if(isset($_POST["submit"])){
 
-	$username = $_POST["uid"];
+	$uid = $_POST["uid"];
 	$pwd = $_POST["pwd"];
 
-	require_once 'dbh-inc.php';
-	require_once 'functions-inc.php';
+	include "../classes/DatabaseHandler.php";
+	include "../classes/Login.php";
+	include "../classes/LoginController.php";
+	$login = new LoginController($uid, $pwd);
 
-	if(emptyInputLogin($username, $pwd) !== false){
-		header("location: ../login.php?error=emptyInput");
-		exit();
-	}
+	$login->loginUser();
 
-	loginUser($conn, $username, $pwd);
-
+	header("location: ../login.php?error=none");
+	exit();
 }
 else{
 	header("location: ../login.php");
