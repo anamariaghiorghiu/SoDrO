@@ -96,11 +96,9 @@
 
 .registerContent{
 	min-height: 300px;
-	width: 100%;
-	height: 67vh;
-	background-color: #333533;
+	height: 70vh;
 	overflow: hidden;
-	flex-direction: row;
+	background-color: #333533;
 }
 .registerContent h2{
 	margin-left: 10px;
@@ -120,12 +118,10 @@
 }
 .register-form{
 	margin-left: 2vw;
-	max-width: 28vw;
+	max-width: 30vw;
 	width: 100%;
-	min-width: 300px;
-	height: 310px;
+	min-width: 30vw;
 	flex-direction: column;
-	justify-content: center;
 	display: inline-flex;
 	align-items: center;
 	background-color: #242423;
@@ -147,14 +143,13 @@
 .register-form .input-box{
 	text-align: center;
 	flex-direction: column;
-
 }
 .reg-logo{
 	width: 40px;
 }
 .register-form .input-box input{
 	font-size: 15px;
-	width: 23vw;
+	width: 25vw;
 	min-width: 200px;
 
 	background-color: #333533;
@@ -183,50 +178,37 @@
 	padding: 0;
 }
 .registerContent .pahar{
-	width: 500px;
-	height: 65vh;
+	width: 30%;
 	position: absolute;
-	right: 8vw;
-	bottom: 11vh;
+	right: 1vh;
+	bottom: 15vh;
 	overflow: hidden;
-}
 
-@media (max-width: 1100px){
-	.registerContent .pahar{
+}
+@media screen and (max-height: 700px){
+	.pahar{
 		display: none;
 	}
-	.registerContent h2{
-		font-size: 8vw;
-	}
-	.registerContent h3{
-		 font-size: 7vw;
-	}
-}
-
-@media (max-width: 850px){
-	.registerContent .pahar{
-		display: none;
-	}
-	.register-form{
-		margin-left: 2vw;
-		max-width: 30vw;
-		width: 100%;
-		min-width: 320px;
-		height: 310px;
-		flex-direction: column;
-		justify-content: center;
-		display: inline-flex;
-		align-items: center;
-		background-color: #242423;
-		border-radius: 25px;
-		text-align: center;
-	}
-	.registerContent h2{
+	/* .registerContent h2{
 		font-size: 9vw;
 	}
 	.registerContent h3{
 		 font-size: 8vw;
 	}
+	.registerContent .pahar {display: none}
+	.register-form{
+		margin-left: 2vw;
+		max-width: 70vw;
+		min-width: 70vw;
+	}
+	.reg-logo{
+		width: 40px;
+	}
+	.register-form .input-box input{
+		font-size: 20px;
+		width: 25vw;
+		min-width: 200px;
+	} */
 }
 
 .loginContent{
@@ -321,41 +303,21 @@
 	padding: 0;
 }
 .loginContent .pahar{
-	width: 500px;
-	height: 65vh;
+	width: 30%;
+	min-width: 370px;
 	position: absolute;
-	right: 8vw;
-	bottom: 11vh;
+	right: 5vh;
+	bottom: 20vh;
 	overflow: hidden;
-
+}
+@media screen and (max-width: 700px){
+	.loginContent .pahar{bottom: 0px}
+}
+@media screen and (max-height: 550px){
+	.loginContent h2{display: none}
+	.loginContent h3{display: none}
 }
 
-@media (max-width: 850px){
-	.loginContent .pahar{
-		display: none;
-	}
-	.login-form{
-
-		margin-left: 2vw;
-		max-width: 30vw;
-		width: 100%;
-		min-width: 320px;
-		height: 250px;
-		flex-direction: column;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #242423;
-		border-radius: 25px;
-		text-align: center;
-	}
-	.loginContent h2{
-		font-size: 9vw;
-	}
-	.loginContent h3{
-		 font-size: 8vw;
-	}
-}
 
 .forgot-password-content{
 	min-height: 300px;
@@ -440,7 +402,7 @@
 	bottom: 11vh;
 	overflow: hidden;
 }
-
+/***********AIIIIIIIIIIIIICI*************/
 @media screen and (max-width: 870px){
 	.forgot-password-form .input-box img{
 		display: none;
@@ -655,6 +617,168 @@
 	height: 67vh;
 	overflow: hidden;
 	background-color: #333533;
+}
+
+.manage-account-content{
+	min-height: 300px;
+	width: 100%;
+	height: 75vh;
+	overflow: hidden;
+	background-color: #333533;
+	font-family: "Open Sans", sans-serif;
+	color: #F5CB5C;
+	text-decoration: none;
+	position: relative;
+}
+.manage-account-content h2{
+	margin-left: 10px;
+	font-size: 4vw;
+	font-weight: 800;
+}
+.manage-account-content h3{
+	margin-left: 10px;
+ 	font-size: 3vw;
+ 	font-weight: 800;
+}
+.Bio{
+	font-size: 2.5vh;
+	width: 30vw;
+	background-color: #242423;
+	display: inline-block;
+	align-items: center;
+	vertical-align: center;
+	border: none;
+	border-radius: 25px;
+	color: #F5CB5C;
+	padding: 0.75vw;
+	text-align: center;
+}
+
+.manage-account-content div{
+	position: relative;
+	top: -22%;
+}
+.manage-account-content h4{
+	margin-left: 10px;
+ 	font-size: 2vw;
+ 	font-weight: 800;
+}
+.user-logo{
+	width: 20%;
+}
+.manage-account-content ul{
+	column-count: 2;
+}
+
+.manage-account-content ul li {
+	text-align: center;
+	flex-direction: column;
+	padding-bottom: 2vh;
+}
+.manage-account-content ul li input, ul li button{
+	font-size: 2.5vh;
+	width: 30vw;
+	background-color: #F5CB5C;
+	display: inline-block;
+	align-items: center;
+	vertical-align: center;
+	border-bottom: 0.5px solid gray;
+	border-radius: 25px;
+	color: #242423;
+	padding: 0.75vw;
+	text-align: center;
+}
+.manage-account-content ul li img{
+	vertical-align: middle;
+}
+.manage-account-content ul li div{
+	width: 3vw;
+	height: 3vh;
+	justify-content: center;
+	background-color: #242423;
+	border-radius: 25px;
+	text-align: center;
+	vertical-align: middle;
+}
+.save_button{
+	color:#242423;
+	background-color:#f5cb5c;
+	height: 7vh;
+	width: 18vw;
+	border-radius: 25px;
+	font-size: 3vh;
+	margin-top: 2.5%;
+	margin-left: 40%;
+	font-weight: bold;
+}
+.manage-account-content .save_button:hover{
+	color: #ff5ea2;
+}
+
+@media screen and (max-width: 900px) {
+	.manage-account-content ul{
+		column-count: 1;
+	}
+
+	.manage-account-content h2, h3{
+		display: none;
+	}
+
+	.manage-account-content h4{
+		text-align: center;
+		padding-bottom: 3vh;
+		font-size: 5vh;
+	}
+
+	.manage-account-content ul li input, ul li button{
+		width: 50vw;
+	}
+
+	.Bio{
+		width: 50vw;
+	}
+
+	.manage-account-content img{
+		display: none;
+	}
+
+	.save_button{
+		width: 60vw;
+		margin-left: 20%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 2000px) {
+	.manage-account-content div{
+		top: -14%;
+	}
+}
+
+@media screen and (max-width: 1750px) {
+	.manage-account-content div{
+		top: -8%;
+	}
+}
+@media screen and (max-width: 1450px) {
+	.manage-account-content div{
+		top: 0%;
+	}
+	.user-logo{
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.manage-account-content h4{
+		padding-bottom: 15vh;
+	}
+}
+
+@media screen and (max-height: 950px) {
+	.manage-account-content div{
+		top: -22%;
+	}
 }
 
 /********************************************************/
@@ -893,7 +1017,3 @@
 	.userpiclogo{
 		display: none;
 	}}
-
-	.productsContent{
-		
-	}
