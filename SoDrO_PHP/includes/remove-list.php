@@ -3,6 +3,7 @@
 session_start();
 
 if(isset($_SESSION["userid"])){
+	if(isset($_POST["remove"])){
 		include "../classes/DatabaseHandler.php";
 		include "../classes/Lists.php";
 		include "../classes/ListsView.php";
@@ -18,6 +19,11 @@ if(isset($_SESSION["userid"])){
 		}
 		header("location: ../lists.php");
 		exit();
+	}
+	else{
+		header("location: ../lists.php?error=noButtonPressed");
+		exit();
+	}
 }
 else{
 	header("location: ../lists.php?error=notLoggedIn");
