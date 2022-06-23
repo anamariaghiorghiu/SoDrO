@@ -191,12 +191,7 @@
 		<script>
 		$(document).ready(function(){
 
-			$(".product").hover(function(){
-				$(this).find('.details-button').toggle();
-			});
-
 			$(".product_check").click(function(){
-
 				var action = 'data';
 				var categories = get_filter_text('categories');
 				var price = get_filter_text('price');
@@ -221,6 +216,19 @@
 				});
 				return filterData;
 			}
+
+		$(document).on({
+			mouseenter: function(){
+				$(this).find('.details-button').show();
+			}	
+		}, ".product");
+
+		$(document).on({
+			mouseleave: function(){
+				$(this).find('.details-button').hide();
+			}
+		}, ".product");
+
 		});
 	</script>
 <?php
