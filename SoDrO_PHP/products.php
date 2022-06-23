@@ -15,47 +15,47 @@
 				<ul class="list-group">
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Acidic" id="acidic">Acidic
+							<input type="checkbox" class="product_check" value="Acidic" id="categories">Acidic
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Alcoholic" id="alcoholic">Alcoholic
+							<input type="checkbox" class="product_check" value="Alcoholic" id="categories">Alcoholic
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Dairy" id="dairy">Dairy
+							<input type="checkbox" class="product_check" value="Dairy" id="categories">Dairy
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Coffee" id="coffee">Coffee
+							<input type="checkbox" class="product_check" value="Coffee" id="categories">Coffee
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Energy" id="energy">Energy Drinks
+							<input type="checkbox" class="product_check" value="Energy" id="categories">Energy Drinks
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Natural" id="natural">Natural Drinks
+							<input type="checkbox" class="product_check" value="Natural" id="categories">Natural Drinks
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Syrups" id="syrups">Syrups
+							<input type="checkbox" class="product_check" value="Syrups" id="categories">Syrups
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Teas" id="teas">Teas
+							<input type="checkbox" class="product_check" value="Teas" id="categories">Teas
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Water" id="water">Waters
+							<input type="checkbox" class="product_check" value="Water" id="categories">Waters
 						</label>
 					</li>
 				</ul>
@@ -66,37 +66,37 @@
 				<ul class="list-group">
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="priceFilter0-5" id="priceFilter0-5">0.5-5
+							<input type="checkbox" class="product_check" value="priceFilter0-5" id="price">0.5-5
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="priceFilter5-10" id="priceFilter5-10">5-10
+							<input type="checkbox" class="product_check" value="priceFilter5-10" id="price">5-10
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="priceFilter10-20" id="priceFilter10-20">10-20
+							<input type="checkbox" class="product_check" value="priceFilter10-20" id="price">10-20
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="priceFilter20-30" id="priceFilter20-30">20-30
+							<input type="checkbox" class="product_check" value="priceFilter20-30" id="price">20-30
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="priceFilter30-40" id="priceFilter30-40">30-40
+							<input type="checkbox" class="product_check" value="priceFilter30-40" id="price">30-40
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="priceFilter40-50" id="priceFilter40-50">40-50
+							<input type="checkbox" class="product_check" value="priceFilter40-50" id="price">40-50
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="priceFilter50+" id="priceFilter50+">50+
+							<input type="checkbox" class="product_check" value="priceFilter50+" id="price">50+
 						</label>
 					</li>
 				</ul>
@@ -107,32 +107,32 @@
 				<ul class="list-group">
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Carrefour" id="carrefour">Carrefour
+							<input type="checkbox" class="product_check" value="Carrefour" id="availability">Carrefour
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Flux" id="flux">Flux
+							<input type="checkbox" class="product_check" value="Flux" id="availability">Flux
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Kaufland" id="kaufland">Kaufland
+							<input type="checkbox" class="product_check" value="Kaufland" id="availability">Kaufland
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Lidl" id="lidl">Lidl
+							<input type="checkbox" class="product_check" value="Lidl" id="availability">Lidl
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Mega Image" id="megaImage">Mega Image
+							<input type="checkbox" class="product_check" value="Mega Image" id="availability">Mega Image
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Profi" id="profi">Profi
+							<input type="checkbox" class="product_check" value="Profi" id="availability">Profi
 						</label>
 					</li>
 				</ul>
@@ -143,33 +143,33 @@
 				<ul class="list-group">
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Dairy Alergen" id="dairyAlergen">Dairy
+							<input type="checkbox" class="product_check" value="Dairy Alergen" id="restrictions">Dairy
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Nuts" id="nuts">Nuts
+							<input type="checkbox" class="product_check" value="Nuts" id="restrictions">Nuts
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Soybeans" id="soybeans">Soybeans
+							<input type="checkbox" class="product_check" value="Soybeans" id="restrictions">Soybeans
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Sugar" id="sugar">Sugar
+							<input type="checkbox" class="product_check" value="Sugar" id="restrictions">Sugar
 						</label>
 					</li>
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" value="Wheat" id="wheat">Wheat
+							<input type="checkbox" class="product_check" value="Wheat" id="restrictions">Wheat
 						</label>
 					</li>
 				</ul>
 				</div>
 			</div>
-			<div class="products">
+			<div class="products" id="result">
 				<?php
 					$products = new ProductsView();
 					$result = $products->getProductsList();
@@ -188,6 +188,37 @@
 			</div>
 		</div>
 	</div>
+		<script>
+		$(document).ready(function(){
+
+			$(".product_check").click(function(){
+
+				var action = 'data';
+				var categories = get_filter_text('categories');
+				var price = get_filter_text('price');
+				var availability = get_filter_text('availability');
+				var restrictions = get_filter_text('restrictions');
+
+				$.ajax({
+					url:'includes/products-inc.php',
+					method:'POST',
+					data:{action:action, categories:categories, price:price, availability:availability, restrictions:restrictions},
+					success:function(response){
+						$("#result").html(response);
+					}
+				});
+
+			});
+
+			function get_filter_text(text_id){
+				var filterData = [];
+				$('#'+text_id+':checked').each(function(){
+					filterData.push($(this).val());
+				});
+				return filterData;
+			}
+		});
+	</script>
 <?php
  include_once 'footer.php';
 ?>
