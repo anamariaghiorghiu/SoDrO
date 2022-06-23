@@ -25,4 +25,20 @@ class Lists extends DatabaseHandler {
 		return $results;
 	}
 
+	protected function getById($id){
+		$sql="SELECT * FROM drinksList WHERE id = ?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $id, PDO::PARAM_INT);
+		$stmt->execute();
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+	protected function deleteById($id){
+		$sql="DELETE FROM drinksList WHERE id = ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $id, PDO::PARAM_INT);
+		$stmt->execute();
+	}
+
 }

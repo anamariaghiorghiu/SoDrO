@@ -6,4 +6,8 @@ class ListsView extends Lists {
 		return $this->getAll($userId);
 	}
 
+	public function getListById($id){
+		return $this->getById($id);
+	}
+
 }
