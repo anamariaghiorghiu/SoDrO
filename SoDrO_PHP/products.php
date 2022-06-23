@@ -6,10 +6,11 @@
 ?>
 	<div class="productsContent">
 		<form class="products-search" action='includes-products-search.php' method="POST">
-			<input type="search" placeholder="search..">
+			<input type="search" placeholder="Search by name of product...">
 		</form>
 		<div class="rows">
 			<div class="filters">
+				<div class="categ">
 				<h6>Select category</h6>
 				<ul class="list-group">
 					<li class="list-group-item">
@@ -58,6 +59,9 @@
 						</label>
 					</li>
 				</ul>
+				</div>
+				
+				<div class="categ">
 				<h6>Filter by price</h6>
 				<ul class="list-group">
 					<li class="list-group-item">
@@ -96,6 +100,9 @@
 						</label>
 					</li>
 				</ul>
+				</div>
+
+				<div class="categ">
 				<h6>Available in</h6>
 				<ul class="list-group">
 					<li class="list-group-item">
@@ -129,6 +136,9 @@
 						</label>
 					</li>
 				</ul>
+				</div>
+
+				<div class="categ">
 				<h6>Alergens</h6>
 				<ul class="list-group">
 					<li class="list-group-item">
@@ -157,9 +167,9 @@
 						</label>
 					</li>
 				</ul>
+				</div>
 			</div>
 			<div class="products">
-				<h6>Products</h6>
 				<?php
 					$products = new ProductsView();
 					$result = $products->getProductsList();
