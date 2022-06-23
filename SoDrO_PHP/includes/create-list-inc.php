@@ -9,7 +9,7 @@ if(isset($_SESSION["userid"])){
 		include "../classes/ListsController.php";
 
 		$lists = new ListsController($_POST["list-name"]);
-		$lists->updateListNameById($_SESSION["userid"]);
+		$lists->addList($_SESSION["userid"]);
 		header("location: ../lists.php");
 		exit();
 	}
