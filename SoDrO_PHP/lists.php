@@ -10,10 +10,10 @@
     <h3>a sip of ingeniosity.</h3>
         <button class="add-list"> Add new list </button>
         <div class="create-new-list">
-        <form class="add-list-form" action="includes/create-list-inc.php" method="post" style="display: none">
-            <input id="add-text" type="text" name="list-name" placeholder="List Name..." required>
+        <form class="add-list-form" action="includes/create-list-inc.php" method="post">
+            <input id="add-text" type="text" name="list-name" placeholder="List Name" required>
             <button class="add-button" name="add-button" type="submit">Add</button>
-            <button id="cancel-button" type="submit">Cancel</button>
+            <button class="cancel-button" id="cancel-button" type="submit">Cancel</button>
         </form>
     
 
@@ -45,7 +45,12 @@
                     echo "<tr>
                         <td> ".($i+1)." </td>
                         <td> ".$result[$i]['name']." </td>
-                        <td> <a class='view' href='./viewList.php?id=".$result[$i]['id']."'> View</td>
+                        <td> 
+                            <form method='post' action='./viewList.php?id=".$result[$i]['id']."'>
+                                <input type='hidden' name='view'>
+                                <button type='submit' name='view' value='view' class='view'>View</button>
+                            </form>
+                        </td>
                         <td>
                             <form method='post' action='includes/remove-list.php?id=".$result[$i]['id']."'>
                                 <input type='hidden' name='remove'>
