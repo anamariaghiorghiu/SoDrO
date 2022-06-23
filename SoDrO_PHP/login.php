@@ -30,6 +30,9 @@
 					else if($_GET["error"] == "wrongPassword"){
 						echo "<p> Invalid password! </p>";
 					}
+					else if($_GET["error"] == "stmtFailed"){
+						echo "<p> Something went wrong, try again! </p>";
+					}
 				}
 				?>
 				

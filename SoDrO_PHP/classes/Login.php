@@ -45,7 +45,7 @@ class Login extends DatabaseHandler {
 
 			session_start();
 			$_SESSION["userid"] = $user[0]["usersId"];
-			$_SESSION["userid"] = $user[0]["usersUid"];
+			$_SESSION["userUid"] = $user[0]["usersUid"];
 			$stmt = null;
 		}
 
