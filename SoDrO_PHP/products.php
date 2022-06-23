@@ -168,6 +168,7 @@
 					</li>
 				</ul>
 				</div>
+
 			</div>
 			<div class="products" id="result">
 				<?php
@@ -175,12 +176,11 @@
 					$result = $products->getProductsList();
 
 					for($i = 0; $i<count($result); $i++){
-						//print_r($result[$i]['name']);
-
 						echo "<div class='product'>";
 						echo "<img src=".$result[$i]['imageSrc']." alt='product_img' class='product_img'>";
 						echo "<p>".$result[$i]['name']."</p>";
 						echo "<p>".$result[$i]['quantity']." L</p>";
+						echo "<a class='details-button' href='./productPage.php?id=".$result[$i]['id']."' style='display:none'> Details</a>";
 						echo '</div>';
 
 					}
@@ -190,6 +190,10 @@
 	</div>
 		<script>
 		$(document).ready(function(){
+
+			$(".product").hover(function(){
+				$(this).find('.details-button').toggle();
+			});
 
 			$(".product_check").click(function(){
 
