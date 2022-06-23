@@ -180,7 +180,7 @@
 						echo "<img src=".$result[$i]['imageSrc']." alt='product_img' class='product_img'>";
 						echo "<p>".$result[$i]['name']."</p>";
 						echo "<p>".$result[$i]['quantity']." L</p>";
-						echo "<a class='details-button' href='./productPage.php?id=".$result[$i]['id']."' style='display:none'> Details</a>";
+						echo "<a class='details-button' href='./productPage.php?id=".$result[$i]['id']."' style='display:none'> <img src='images/details.png' id='details' class='details_size' alt='details'></a>";
 						echo '</div>';
 
 					}
