@@ -143,7 +143,7 @@
 				<ul class="list-group">
 					<li class="list-group-item">
 						<label>
-							<input type="checkbox" class="product_check" value="Dairy Alergen" id="restrictions">Dairy
+							<input type="checkbox" class="product_check" value="Dairy" id="restrictions">Dairy
 						</label>
 					</li>
 					<li class="list-group-item">
