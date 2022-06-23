@@ -11,4 +11,8 @@ class ListsController extends Lists {
 		$this->insertList($this->name, $userId);
 	}
 
+	public function deleteListById($id){
+		$this->deleteById($id);
+	}
+
 }

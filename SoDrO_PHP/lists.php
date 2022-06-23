@@ -28,8 +28,10 @@
 
         }
     ?>
+
     </div>
     <table class="lists"> 
+
         <?php
             $lists=new ListsView();
             $result = $lists->getAllLists($_SESSION["userid"]);
@@ -44,7 +46,12 @@
                         <td> ".($i+1)." </td>
                         <td> ".$result[$i]['name']." </td>
                         <td> <a class='view' href='./viewList.php?id=".$result[$i]['id']."'> View</td>
-                        <td> <a class='remove' href='includes/remove-list.php?id=".$result[$i]['id']."'>Remove</td>
+                        <td>
+                            <form method='post' action='includes/remove-list.php?id=".$result[$i]['id']."'>
+                                <input type='hidden' name='remove'>
+                                <button type='submit' name='remove' value='remove' class='remove'>Remove</button>
+                            </form>
+                        </td>
                         </tr>";
                 }
              }
