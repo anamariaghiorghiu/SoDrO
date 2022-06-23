@@ -1,26 +1,26 @@
-<?php 
+<?php
 
 session_start();
 
 if(isset($_SESSION["userid"])){
-	if(isset($_POST["remove"])){
+	if(isset($_POST["update-list"])){
 		include "../classes/DatabaseHandler.php";
 		include "../classes/Lists.php";
 		include "../classes/ListsView.php";
 		include "../classes/ListsController.php";
 
 		$listsView = new ListsView();
-		if(empty($listsView->getListById($_GET["id"]))){
+		if(empty($listsView->getListById($_POST["send-id"]))){
 		}
 		else{
-			$listsController = new ListsController(null);
-			$listsController->deleteListById($_GET["id"]);
+			$lists = new ListsController($_POST["update-list-value"]);
+			$lists->updateListNameById($_POST["send-id"],$_POST["update-list-value"]);
 		}
-		header("location: ../lists.php");
+		header("location: ../viewList.php?id=".$_POST["send-id"]);
 		exit();
 	}
 	else{
-		header("location: ../lists.php?error=noButtonPressed");
+		header("location: ../lists.php");
 		exit();
 	}
 }
