@@ -41,4 +41,12 @@ class Lists extends DatabaseHandler {
 		$stmt->execute();
 	}
 
+	protected function updateNameById($id, $name){
+		$sql="UPDATE drinksList SET name = ? WHERE id = ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $name, PDO::PARAM_STR);
+		$stmt->bindValue(2, $id, PDO::PARAM_INT);
+		$stmt->execute();
+	}
+
 }

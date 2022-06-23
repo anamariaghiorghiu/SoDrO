@@ -15,4 +15,8 @@ class ListsController extends Lists {
 		$this->deleteById($id);
 	}
 
+	public function updateListNameById($id, $name){
+		$this->name=$this->updateNameById($id, $name);
+	}
+
 }
