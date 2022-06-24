@@ -1,14 +1,9 @@
 <?php
 
 class ListsController extends Lists {
-	private $name;
-	
-	public function __construct($name){
-		$this->name = $name;
-	}
 
-	public function addList($userId){
-		$this->insertList($this->name, $userId);
+	public function createList($name, $userId){
+		$this->insertList($name, $userId);
 	}
 
 	public function deleteListById($id){
@@ -16,7 +11,7 @@ class ListsController extends Lists {
 	}
 
 	public function updateListNameById($id, $name){
-		$this->name=$this->updateNameById($id, $name);
+		$this->updateNameById($id, $name);
 	}
 
 }
