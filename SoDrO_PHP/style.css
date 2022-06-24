@@ -909,7 +909,9 @@ textarea {
 	text-decoration: none;
     background-color: #333533;
 }
-
+.lists-content p{
+	color: #F5CB5C;
+}
 .lists-content h2{
     color: #F5CB5C;
 	font-size: 4vw;
@@ -1542,7 +1544,7 @@ textarea {
 /********************product page**/
 .productPageContent{
 	overflow: auto;
-	height: auto;
+	height: 72vh;
 }
 
 .productData{

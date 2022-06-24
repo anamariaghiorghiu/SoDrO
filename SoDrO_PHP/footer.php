@@ -14,7 +14,7 @@
 			</li>
 			<li>
 				<img src="images/Preferences_logo.png" alt="Preferences logo" class="logo-botnav">
-				<a href="preferences.php">Preferences</a>
+				<a href="lists.php">Lists</a>
 			</li>
 		</ul>
 	</div>
