@@ -6,7 +6,8 @@
 		<h3>a sip of ingeniosity.</h3>
 		<div class="info-and-content">
 			<div class="list-info">
-					<h4> TW AfterParty <h4>
+					<div id="list-name"><input type="text" value="TW AfterParty" readonly>
+						<button id="edit-button">Edit</button>
 					<h5> <b> Created on: </b> 24/06/2022 <br/> <b> Number of products: </b> 0 </h5>
 			</div>
 			<div class="content-table">
@@ -29,9 +30,9 @@
 								<div class="product-numbers">
 									<ul>
 										<li>
-											<button class="add-button"> -1 </button>
 											<button class="quantity"> 2 </button>
-											<button class="add-button"> +1 </button>
+											<button class="add-button"> - </button>
+											<button class="add-button"> + </button>
 										</li>
 									</ul>
 								</div>
@@ -42,6 +43,16 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function(){
+
+			$("#edit-button").click(function(){
+				
+			});
+
+		});
+	</script>
+
 <?php
  include_once 'footer.php';
 ?>
