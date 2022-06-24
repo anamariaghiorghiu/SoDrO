@@ -1183,7 +1183,7 @@ textarea {
 	color: #F5CB5C;
 }
 .info-and-content{
-	
+	position: relative;
 	column-count: 2;
 }
 .viewListContent h2{
