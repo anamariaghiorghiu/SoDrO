@@ -23,14 +23,15 @@
         </div>
         <div>
             <ul id="navbar">
-		<li><a href="startPage.php">Home</a></li>
 		<?php
 		if (isset($_SESSION["userid"])){
+			echo "<li><a href='homepageLogin.php'>Home</a></li>";
                 	echo "<li><a href='manage-account.php'>Profile</a></li>";
                 	echo "<li><a href='includes/logout-inc.php'>Logout</a></li>";
 		}else{
+			echo "<li><a href='startPage.php'>Home</a></li>";
 			echo "<li><a href='register.php'>Register</a></li>";
-			echo "<li><a  href='login.php'>Log in</a></li>";
+			echo "<li><a href='login.php'>Log in</a></li>";
 			echo "<li><a href='profile.php'><img src='images/userpic_logo.png' class='userpiclogo' alt='userpiclogo'></a></li>";
 		}
         ?>     
