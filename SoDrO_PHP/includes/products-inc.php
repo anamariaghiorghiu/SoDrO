@@ -23,7 +23,10 @@
 		if(isset($_POST['restrictions'])){
 			$restrictions=$_POST['restrictions'];
 		}
-		$result = $products->getProductsByFilters($categories, $price, $availability, $restrictions);
+		if(isset($_POST['searchValue'])){
+			$searchValue=$_POST['searchValue'];
+		}
+		$result = $products->getProductsByFilters($categories, $price, $availability, $restrictions, $searchValue);
 
 		if(!empty($result)){
 			for($i = 0; $i<count($result); $i++){

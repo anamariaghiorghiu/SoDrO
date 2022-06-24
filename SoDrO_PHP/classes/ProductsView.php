@@ -20,8 +20,8 @@ class ProductsView extends Products {
 		return $array;
 	}
 
-	public function getProductsByFilters($categories, $price, $availability, $restrictions){
-		$array = $this->getByFilters($categories, $price, $availability, $restrictions);
+	public function getProductsByFilters($categories, $price, $availability, $restrictions, $search){
+		$array = $this->getByFilters($categories, $price, $availability, $restrictions, $search);
 		for($i=0;$i<count($array);$i++){
 			$array[$i]['restrictions'] = json_decode($array[$i]['restrictions']);
 			$array[$i]['availability'] = json_decode($array[$i]['availability']);
