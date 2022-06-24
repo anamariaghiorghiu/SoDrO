@@ -10,7 +10,7 @@
     <h3>a sip of ingeniosity.</h3>
         <button class="add-list"> Add new list </button>
         <div class="create-new-list">
-        <form class="add-list-form" action="includes/create-list-inc.php" method="post">
+        <form class="add-list-form" action="includes/create-list-inc.php" method="post" style="display: none">
             <input id="add-text" type="text" name="list-name" placeholder="List Name" required>
             <button class="add-button" name="add-button" type="submit">Add</button>
             <button class="cancel-button" id="cancel-button" type="submit">Cancel</button>

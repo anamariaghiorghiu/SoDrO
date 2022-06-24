@@ -3,7 +3,7 @@
 class Lists extends DatabaseHandler {
 
 	protected function insertList($name, $userId){
-		$sql="INSERT INTO drinksList (name, createdAt, userId) values (?, ?, ?);";
+		$sql="INSERT INTO drinksList (name, counter, createdAt, userId) values (?, 0, ?, ?);";
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->bindValue(1, $name, PDO::PARAM_STR);
 		$stmt->bindValue(2, date('Y-m-d H:i:s'));
@@ -35,6 +35,12 @@ class Lists extends DatabaseHandler {
 	}
 
 	protected function deleteById($id){
+
+		$sql="DELETE FROM drinksListItems WHERE drinksListId = ?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $id, PDO::PARAM_INT);
+		$stmt->execute();
+
 		$sql="DELETE FROM drinksList WHERE id = ?;";
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->bindValue(1, $id, PDO::PARAM_INT);
@@ -47,6 +53,26 @@ class Lists extends DatabaseHandler {
 		$stmt->bindValue(1, $name, PDO::PARAM_STR);
 		$stmt->bindValue(2, $id, PDO::PARAM_INT);
 		$stmt->execute();
+	}
+
+	protected function getProductsById($id){
+		$sql="SELECT DISTINCT
+		products.name as productName,
+		products.price as price,
+		products.quantity as quantity,
+		products.imageSrc as imageSrc,
+		drinksList.name as listName,
+		drinksList.counter as counter,
+		drinksList.createdAt as createdAt 
+		FROM products JOIN drinkslistitems on products.id = drinkslistitems.productsid
+		JOIN drinkslist on drinkslistitems.drinksListId = drinkslist.id
+		WHERE drinksList.id=?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $id, PDO::PARAM_INT);
+		$stmt->execute();
+
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $results;
 	}
 
 }

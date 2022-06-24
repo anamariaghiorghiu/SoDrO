@@ -8,8 +8,8 @@ if(isset($_SESSION["userid"])){
 		include "../classes/Lists.php";
 		include "../classes/ListsController.php";
 
-		$lists = new ListsController($_POST["list-name"]);
-		$lists->addList($_SESSION["userid"]);
+		$lists = new ListsController();
+		$lists->createList($_POST["list-name"], $_SESSION["userid"]);
 		header("location: ../lists.php");
 		exit();
 	}

@@ -11,6 +11,16 @@ class Products extends DatabaseHandler {
 		return $results;
 	}
 
+	protected function getById($id){
+		$sql = "SELECT * from products WHERE id = ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $id, PDO::PARAM_INT);
+		$stmt->execute();
+
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
 	protected function getByFilters($categories, $price, $availability, $restrictions){
 
 		$ok=0;
@@ -153,6 +163,6 @@ class Products extends DatabaseHandler {
 		$stmt->execute();
 		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		return $results;
-
 	}
+
 }

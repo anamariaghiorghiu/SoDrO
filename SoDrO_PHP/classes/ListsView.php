@@ -10,6 +10,8 @@ class ListsView extends Lists {
 		return $this->getById($id);
 	}
 
+	public function getListProductsById($id){
+		return $this->getProductsById($id);
+	}
 	
-
 }
