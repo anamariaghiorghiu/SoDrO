@@ -1170,17 +1170,132 @@ textarea {
     border: none;
 }
 
+/* aici se termina cele 230 de linii pentru LISTS.PHP */
+
+/* view-list */ 
 .viewListContent{
-	width: 100%;
-	height: 72vh;
-	overflow: hidden;
-    color: #F5CB5C;
-	font-family: "Open Sans", sans-serif;
-	text-decoration: none;
     background-color: #333533;
+	width: 100%;
+	height: 75vh;
+	overflow: hidden;
+	font-family: "Open Sans", sans-serif;
+	position: relative;
+	color: #F5CB5C;
+}
+.info-and-content{
+	position: relative;
+	column-count: 2;
+}
+.viewListContent h2{
+	margin-left: 10px;
+	font-size: 4vw;
+	font-weight: 800;
+	margin-bottom: -3vh;
+}
+.viewListContent h3{
+	margin-left: 10px;
+ 	font-size: 3vw;
+ 	font-weight: 800;
+    margin-bottom: 2vw;
+}
+.viewListContent h4{
+	margin-left: 10px;
+ 	font-size: 2vw;
+ 	font-weight: 800;
+	max-width: 29vw;
+}
+.viewListContent h5{
+	margin-left: 10px;
+ 	font-size: 1.5vw;
+ 	font-weight: normal;
+}
+.content-table{
+    border-radius: 25px;
+    margin-right: 5vw;
+	margin-left: -30vw;
+	margin-top: -10vh;
+    background-color: #242423;
+    text-align: center;
+    border-spacing: 4vh;
+    border-collapse:separate; 
+    overflow:hidden;
+    overflow-y:scroll;
+    height: 50vh;
+    display:block;
+    border-style: none!important;
+    border-bottom: 2px solid #F5CB5C;
+}
+.product-frame{
+	width: max-content;
+	padding: 30px;
+	background-color: #ffffff;
+	border-radius: 25px;
+	margin-left: 3vw;
+	margin-top: 2vh;
+	margin-bottom: 1vh;
+}
+.list-content{
+	display: flex;
+}
+.list-content img{
+	margin-top: 1vh;
+	mix-blend-mode: multiply;
+	width: 20vh;
+}
+.product-description{
+	background-color: #333533;
+    border-radius: 25px;
+	width: 52vw;
+	margin-left: 1vw;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	position: absolute;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	column-count: 2;
+}
+.product-description .product-frame{
+	height: max-content;
+}
+.product-info{
+	flex: 1;
+	padding: 1em;
+	height: 30vh;
+}
+.product-info li{
+	font-weight: 800;
+	font-size: 1.5vw;
+	color: #636563;
 }
 
-/* aici se termina cele 230 de linii pentru LISTS.PHP */
+.product-description .product-name{
+	font-size: 2vw;
+	color: #F5CB5C;
+}
+
+.product-numbers button{
+	margin-top: 3vh;
+	width: 4vw;
+	font-size: 1.25vw;
+	font-weight: normal;
+	border: none;
+	border-radius: 15px;
+}
+
+.add-button{
+	background-color: #242423;
+	color: #F5CB5C;
+
+}
+
+.add-button:hover{
+	color: white;
+}
+
+.quantity{
+	color: #242423;
+	background-color: #F5CB5C;
+}
 
 
 /********************************************************/
