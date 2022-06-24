@@ -12,7 +12,7 @@ class ProductsView extends Products {
 	}
 
 	public function getListById($id){
-		$array = $this->getById($id)
+		$array = $this->getById($id);
 		for($i=0;$i<count($array);$i++){
 			$array[$i]['restrictions'] = json_decode($array[$i]['restrictions']);
 			$array[$i]['availability'] = json_decode($array[$i]['availability']);
