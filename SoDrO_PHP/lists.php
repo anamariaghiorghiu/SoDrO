@@ -51,9 +51,8 @@
                         <td> ".($i+1)." </td>
                         <td> ".$result[$i]['name']." </td>
                         <td> 
-                            <form method='post' action='./view-list.php?id=".$result[$i]['id']."'>
-                                <input type='hidden' name='view'>
-                                <button type='submit' name='view' value='view' class='view'>View</button>
+                            <form method='get' action='./viewList.php'>
+                                <button type='submit' name='id' value=".$result[$i]['id']." class='view'>View</button>
                             </form>
                         </td>
                         <td>

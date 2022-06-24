@@ -173,14 +173,14 @@
 			<div class="products" id="result">
 				<?php
 					$products = new ProductsView();
-					$result = $products->getProductsList();
+					$result = $products->getAllProducts();
 
 					for($i = 0; $i<count($result); $i++){
 						echo "<div class='product'>";
 						echo "<img src=".$result[$i]['imageSrc']." alt='product_img' class='product_img'>";
 						echo "<p>".$result[$i]['name']."</p>";
 						echo "<p>".$result[$i]['quantity']." L</p>";
-						echo "<a class='details-button' href='./productPage.php?id=".$result[$i]['id']."' style='display:none'> <img src='images/details.png' id='details' class='details_size' alt='details'></a>";
+						echo "<a class='details-button' href='./productPage.php?id=".$result[$i]['id']."' target='_blank' style='display:none'> <img src='images/details.png' id='details' class='details_size' alt='details'></a>";
 						echo '</div>';
 
 					}
