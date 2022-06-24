@@ -14,4 +14,8 @@ class ListsController extends Lists {
 		$this->updateNameById($id, $name);
 	}
 
+	public function addListItem($listId, $productId){
+		$this->addItem($listId, $productId);
+	}
+
 }

@@ -75,4 +75,16 @@ class Lists extends DatabaseHandler {
 		return $results;
 	}
 
+	protected function addItem($listId ,$productId){
+		$sql="INSERT INTO drinksListItems (drinksListId, productsId) values (?, ?);";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $listId, PDO::PARAM_INT);
+		$stmt->bindValue(2, $productId, PDO::PARAM_INT);
+		if(!$stmt->execute()){
+			$stmt = null;
+			echo "Something went wrong, try again!";
+		}
+		$stmt = null;
+	}
+
 }
