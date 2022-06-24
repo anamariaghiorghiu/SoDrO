@@ -27,21 +27,21 @@
 			<div class="statistics">
 				<h4> <i> Statistics </i> </h4>
 				<ul class="questions">
-					<li> Best rated Fuzetea flavour </li>
+					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
 					<hr/>
-					<li> The cheapest Fuzetea flavour </li>
+					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
 					<hr/>
-					<li> Healthiest syrup </li>
+					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
 					<hr/>
-					<li> The most expensive energy drink </li>
+					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
 					<hr/>
-					<li> People decide what is the best flavour of Arizona </li>
+					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
 					<hr/>
-					<li> No sugar in Coke?  </li>
+					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
 					<hr/>
-					<li> How many chemicals has Lipton? </li>
+					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
 					<hr/>
-					<li> Pepsi or Coke? Which one is the best? </li>
+					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
 					<hr/>
 				</ul>
 			</div>

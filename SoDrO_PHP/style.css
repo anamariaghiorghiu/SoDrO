@@ -1376,10 +1376,14 @@ textarea {
     font-size: 3vh;
     font-weight: lighter;
 }
+.questions li a{
+	text-decoration: none;
+    color:#f5cb5c;
+}
 .questions li{
     margin-top: 2.5vh;
 }
-.questions li:hover{
+.questions li a:hover{
     color: white;
 }
 .statistics hr{
