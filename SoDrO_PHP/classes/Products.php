@@ -21,7 +21,7 @@ class Products extends DatabaseHandler {
 		return $results;
 	}
 
-	protected function getByFilters($categories, $price, $availability, $restrictions){
+	protected function getByFilters($categories, $price, $availability, $restrictions, $search){
 
 		$ok=0;
 		$count=0;
@@ -39,6 +39,10 @@ class Products extends DatabaseHandler {
 		else if($restrictions != null){
 			$sql="SELECT * FROM products WHERE NOT (restrictions LIKE ?";
 			$ok=4;
+		}
+		else if($search != null){
+			$sql = "SELECT * from products WHERE lower(name) LIKE ?";
+			$ok=5;
 		}
 		else{
 			$sql = "SELECT * from products;";
@@ -96,6 +100,10 @@ class Products extends DatabaseHandler {
 				}
 			}
 			$sql.=')';
+		}
+
+		if($search != null && $ok!=5){
+				$sql.=" AND (lower(name) LIKE ?)";
 		}
 
 		$stmt = $this->connect()->prepare($sql);
@@ -158,6 +166,10 @@ class Products extends DatabaseHandler {
 				$stmt->bindValue($count+1, '%'.$restrictions[$i].'%', PDO::PARAM_STR);
 				$count++;
 			}
+		}
+
+		if($search != null){
+			$stmt->bindValue($count+1, $search.'%', PDO::PARAM_STR);
 		}
 
 		$stmt->execute();

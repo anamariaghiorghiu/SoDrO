@@ -5,9 +5,9 @@
  	include_once 'header.php';
 ?>
 	<div class="productsContent">
-		<form class="products-search" action='includes-products-search.php' method="POST">
-			<input type="search" placeholder="Search by name of product...">
-		</form>
+		<span class="products-search">
+			<input id="search" type="search" placeholder="Search by name of product...">
+		</span>
 		<div class="rows">
 			<div class="filters">
 				<div class="categ">
@@ -197,11 +197,12 @@
 				var price = get_filter_text('price');
 				var availability = get_filter_text('availability');
 				var restrictions = get_filter_text('restrictions');
+				var searchValue = $('#search').val();
 
 				$.ajax({
 					url:'includes/products-inc.php',
 					method:'POST',
-					data:{action:action, categories:categories, price:price, availability:availability, restrictions:restrictions},
+					data:{action:action, categories:categories, price:price, availability:availability, restrictions:restrictions, searchValue:searchValue},
 					success:function(response){
 						$("#result").html(response);
 					}
@@ -216,6 +217,26 @@
 				});
 				return filterData;
 			}
+
+		$(document).on({
+
+			keyup: function(e){
+				var action = 'data';
+				var categories = get_filter_text('categories');
+				var price = get_filter_text('price');
+				var availability = get_filter_text('availability');
+				var restrictions = get_filter_text('restrictions');
+				var searchValue = $('#search').val();
+				$.ajax({
+					url:'includes/products-inc.php',
+					method:'POST',
+					data:{action:action, categories:categories, price:price, availability:availability, restrictions:restrictions, searchValue:searchValue},
+					success:function(response){
+						$("#result").html(response);
+					}
+				});
+			}
+		}, "#search");
 
 		$(document).on({
 			mouseenter: function(){
