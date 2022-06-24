@@ -34,7 +34,12 @@
 
         <?php
             $lists=new ListsView();
+            $result="";
+            if(!isset($_SESSION["userid"])){
+            }
+            else{
             $result = $lists->getAllLists($_SESSION["userid"]);
+            }
             if($result == null){
                 echo "<tr>
                     <td><p>No lists to show, create a list by pressing the 'Add new list' button.</p></td>
