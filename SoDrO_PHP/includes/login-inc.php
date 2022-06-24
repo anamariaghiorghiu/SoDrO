@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
 
 	$login->loginUser();
 
-	header("location: ../login.php?error=none");
+	header("location: ../lists.php");
 	exit();
 }
 else{
