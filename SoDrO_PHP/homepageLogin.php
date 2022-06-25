@@ -3,8 +3,13 @@
 ?>
 
 	<div class="homepageContent">
-		<h2>Soft Drink Organizer</h2>
-		<h3>a sip of ingeniosity.</h3>
+		<div class="top">
+				<h2>Soft Drink Organizer</h2>
+				<h3>a sip of ingeniosity.</h3>
+				<div class="buttonCSV">
+					<button class="generateCSV">Generate CSV</button>
+				</div>
+		</div>
 		<div class="weeklyRankingAndStatistics">
 			<div class="weeklyRanking">
 				<h4> <i> Try Me! </i> </h4>
