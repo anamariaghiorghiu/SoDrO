@@ -27,22 +27,13 @@
 			<div class="statistics">
 				<h4> <i> Statistics </i> </h4>
 				<ul class="questions">
-					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
+					<li><a href='statisticPage.php?chart=category'>What type of drinks people prefer?</a> </li>
 					<hr/>
-					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
+					<li><a href='statisticPage.php?chart=price'>What prices attract people the most?</a> </li>
 					<hr/>
-					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
+					<li><a href='statisticPage.php?chart=availability'>Where do people like to buy from?</a> </li>
 					<hr/>
-					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
-					<hr/>
-					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
-					<hr/>
-					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
-					<hr/>
-					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
-					<hr/>
-					<li><a href='statisticPage.php'>Best rated Fuzetea flavour</a> </li>
-					<hr/>
+					<li><a href='statisticPage.php?chart=restrictions'>What are people allergic to?</a> </li>
 				</ul>
 			</div>
 		</div>

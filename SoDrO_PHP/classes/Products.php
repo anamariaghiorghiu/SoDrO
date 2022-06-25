@@ -177,4 +177,46 @@ class Products extends DatabaseHandler {
 		return $results;
 	}
 
+	protected function getCountByCategory($categories){
+		$sql="SELECT count(*) AS count FROM products JOIN drinkslistitems ON products.id=drinkslistitems.productsId WHERE products.categories = ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $categories, PDO::PARAM_STR);
+		$stmt->execute();
+
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+	protected function getCountByPrice($price1, $price2){
+		$sql="SELECT count(*) AS count FROM products JOIN drinkslistitems ON products.id=drinkslistitems.productsId WHERE products.price BETWEEN ? AND ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $price1, PDO::PARAM_INT);
+		$stmt->bindValue(2, $price2, PDO::PARAM_INT);
+		$stmt->execute();
+
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+	protected function getCountByAvailability($availability){
+		$sql="SELECT count(*) AS count FROM products JOIN drinkslistitems ON products.id=drinkslistitems.productsId WHERE products.availability LIKE ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, '%'.$availability.'%', PDO::PARAM_STR);
+		$stmt->execute();
+
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+	protected function getCountByRestrictions($restrictions){
+		$sql="SELECT count(*) AS count FROM products JOIN drinkslistitems ON products.id=drinkslistitems.productsId WHERE products.restrictions LIKE ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, '%'.$restrictions.'%', PDO::PARAM_STR);
+		$stmt->execute();
+
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+
 }

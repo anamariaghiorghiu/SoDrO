@@ -28,5 +28,21 @@ class ProductsView extends Products {
 		}
 		return $array;
 	}
+
+	public function getProductsCountByCategory($categories){
+		return $this->getCountByCategory($categories);
+	}
+
+	public function getProductsCountByPrice($price1, $price2){
+		return $this->getCountByPrice($price1, $price2);
+	}
+
+	public function getProductsCountByAvailability($availability){
+		return $this->getCountByAvailability($availability);
+	}
+
+	public function getProductsCountByRestrictions($restrictions){
+		return $this->getCountByRestrictions($restrictions);
+	}
 	
 }
