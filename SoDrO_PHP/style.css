@@ -1305,14 +1305,25 @@ textarea {
 	
 }
 
-.viewListContent .add-button{
+.viewListContent .minus-button{
 	color: #242423;
 	background-color: #F5CB5C;
 	border-radius: 50%;
 
 }
 
-.viewListContent .add-button:hover{
+.viewListContent .minus-button:hover{
+	color: white;
+}
+
+.viewListContent .plus-button{
+	color: #242423;
+	background-color: #F5CB5C;
+	border-radius: 50%;
+
+}
+
+.viewListContent .plus-button:hover{
 	color: white;
 }
 
@@ -1326,7 +1337,7 @@ textarea {
 .homepageContent{
     background-color: #333533;
 	width: 100%;
-	height: 75vh;
+	height: 80vh;
 	overflow: hidden;
 	font-family: "Open Sans", sans-serif;
 	position: relative;
@@ -2255,7 +2266,7 @@ textarea {
 	padding: 2vw;
 	text-align: center;
 	position: relative;
-	width: 85px;
+	width: 100px;
 	padding-bottom: 5px;
 
 }

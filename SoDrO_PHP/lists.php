@@ -70,26 +70,26 @@
 </div>
 <script>
     $(document).ready(function(){
-        $(".add-list").click(function(){
-            document.getElementById('add-text').value = "";
-            $(".add-list-form").toggle();
-        });
-        $(".cancel-button").click(function(){
-            $(".add-list-form").hide();
-        })
+            $(".add-list").click(function(){
+                document.getElementById('add-text').value = "";
+                $(".add-list-form").toggle();
+            });
+            $(".cancel-button").click(function(){
+                $(".add-list-form").hide();
+            });
 
         $(document).on({
                 click: function(){
                     var listName = $("#add-text").val();
                     $.ajax({
-                    url:'includes/create-list-inc.php',
-                    method:'POST',
-                    data:{listName:listName},
-                    success:function(response){
-                        $(".lists").html(response);
-                        $(".add-list-form").hide();
-                    }
-                });
+                        url:'includes/create-list-inc.php',
+                        method:'POST',
+                        data:{listName:listName},
+                        success:function(response){
+                            $(".lists").html(response);
+                            $(".add-list-form").hide();
+                        }
+                    });
                 }
             }, ".add-button");
 
@@ -116,13 +116,13 @@
                 click: function(){
                     var listId = $(this).val();
                     $.ajax({
-                    url:'includes/remove-list.php',
-                    method:'POST',
-                    data:{listId:listId},
-                    success:function(response){
-                        $(".lists").html(response);
-                    }
-                });
+                        url:'includes/remove-list.php',
+                        method:'POST',
+                        data:{listId:listId},
+                        success:function(response){
+                            $(".lists").html(response);
+                        }
+                    });
                 }
             }, ".remove");
 
