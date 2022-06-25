@@ -115,7 +115,7 @@
 					var listId = $(".slide").val();
 					const queryString = window.location.search;
 					const urlParams = new URLSearchParams(queryString);
-					const productId = urlParams.get('id')
+					const productId = urlParams.get('id');
 					$.ajax({
 					url:'includes/add-to-list.php',
 					method:'POST',

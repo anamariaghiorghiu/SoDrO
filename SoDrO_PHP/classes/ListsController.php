@@ -18,4 +18,8 @@ class ListsController extends Lists {
 		$this->addItem($listId, $productId);
 	}
 
+	public function deleteListItemById($id){
+		$this->deleteItemById($id);
+	}
+
 }

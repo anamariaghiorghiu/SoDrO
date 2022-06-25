@@ -57,13 +57,15 @@ class Lists extends DatabaseHandler {
 
 	protected function getProductsById($id){
 		$sql="SELECT DISTINCT
+		products.id as productId,
 		products.name as productName,
 		products.price as price,
 		products.quantity as quantity,
 		products.imageSrc as imageSrc,
+		drinksList.id as listId,
 		drinksList.name as listName,
 		drinksList.counter as counter,
-		drinksList.createdAt as createdAt 
+		drinksList.createdAt as createdAt
 		FROM products JOIN drinkslistitems on products.id = drinkslistitems.productsid
 		JOIN drinkslist on drinkslistitems.drinksListId = drinkslist.id
 		WHERE drinksList.id=?";
@@ -72,6 +74,26 @@ class Lists extends DatabaseHandler {
 		$stmt->execute();
 
 		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+	protected function getCountByIds($listId, $productId){
+		$sql="SELECT COUNT(*) AS count FROM drinksListItems WHERE drinksListId = ? AND productsId = ?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $listId, PDO::PARAM_INT);
+		$stmt->bindValue(2, $productId, PDO::PARAM_INT);
+		$stmt->execute();
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+	protected function getItemsId($listId, $productId){
+		$sql="SELECT id FROM drinksListItems WHERE drinksListId = ? AND productsId = ? LIMIT 1";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $listId, PDO::PARAM_INT);
+		$stmt->bindValue(2, $productId, PDO::PARAM_INT);
+		$stmt->execute();
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
 		return $results;
 	}
 
@@ -85,6 +107,13 @@ class Lists extends DatabaseHandler {
 			echo "Something went wrong, try again!";
 		}
 		$stmt = null;
+	}
+
+	protected function deleteItemById($id){
+		$sql="DELETE FROM drinksListItems WHERE id = ?";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $id, PDO::PARAM_INT);
+		$stmt->execute();
 	}
 
 }

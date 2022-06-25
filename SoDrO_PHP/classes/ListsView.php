@@ -14,4 +14,11 @@ class ListsView extends Lists {
 		return $this->getProductsById($id);
 	}
 	
+	public function getItemCountByIds($listId, $productId){
+		return $this->getCountByIds($listId, $productId);
+	}
+
+	public function getListItemsId($listId, $productId){
+		return $this->getItemsId($listId, $productId);
+	}
 }

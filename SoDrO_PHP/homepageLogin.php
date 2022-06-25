@@ -44,6 +44,26 @@
 		</div>
 	</div>
 
+	<script>
+
+		$(document).ready(function(){
+			$(document).on({
+                click: function(){
+                	var action="data";
+                    $.ajax({
+                    url:'includes/generateCSV-inc.php',
+                    method:'POST',
+                    data:{action:action},
+                    success:function(response){
+                    	alert(response);
+                    }
+                });
+                }
+            }, ".generateCSV");
+		});
+
+	</script>
+
 <?php
  include_once 'footer.php';
 ?>
