@@ -27,22 +27,13 @@
 			<div class="statistics">
 				<h4> <i> Statistics </i> </h4>
 				<ul class="questions">
-					<li> Best rated Fuzetea flavour </li>
+					<li><a href='statisticPage.php?chart=category'>What type of drinks people prefer?</a> </li>
 					<hr/>
-					<li> The cheapest Fuzetea flavour </li>
+					<li><a href='statisticPage.php?chart=price'>What prices attract people the most?</a> </li>
 					<hr/>
-					<li> Healthiest syrup </li>
+					<li><a href='statisticPage.php?chart=availability'>Where do people like to buy from?</a> </li>
 					<hr/>
-					<li> The most expensive energy drink </li>
-					<hr/>
-					<li> People decide what is the best flavour of Arizona </li>
-					<hr/>
-					<li> No sugar in Coke?  </li>
-					<hr/>
-					<li> How many chemicals has Lipton? </li>
-					<hr/>
-					<li> Pepsi or Coke? Which one is the best? </li>
-					<hr/>
+					<li><a href='statisticPage.php?chart=restrictions'>What are people allergic to?</a> </li>
 				</ul>
 			</div>
 		</div>

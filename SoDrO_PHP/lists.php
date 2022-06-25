@@ -10,11 +10,11 @@
     <h3>a sip of ingeniosity.</h3>
         <button class="add-list"> Add new list </button>
         <div class="create-new-list">
-        <form class="add-list-form" action="includes/create-list-inc.php" method="post" style="display: none">
+        <span class="add-list-form" style="display: none">
             <input id="add-text" type="text" name="list-name" placeholder="List Name" required>
-            <button class="add-button" name="add-button" type="submit">Add</button>
-            <button class="cancel-button" id="cancel-button" type="submit">Cancel</button>
-        </form>
+            <button class="add-button">Add</button>
+            <button class="cancel-button">Cancel</button>
+        </span>
     
 
     <?php
@@ -56,10 +56,9 @@
                             </form>
                         </td>
                         <td>
-                            <form method='post' action='includes/remove-list.php?id=".$result[$i]['id']."'>
-                                <input type='hidden' name='remove'>
-                                <button type='submit' name='remove' value='remove' class='remove'>Remove</button>
-                            </form>
+                            <span>
+                                <button value='".$result[$i]['id']."' class='remove'>Remove</button>
+                            </span>
                         </td>
                         </tr>";
                 }
@@ -75,9 +74,58 @@
             document.getElementById('add-text').value = "";
             $(".add-list-form").toggle();
         });
-        $("#cancel-button").click(function(){
+        $(".cancel-button").click(function(){
             $(".add-list-form").hide();
         })
+
+        $(document).on({
+                click: function(){
+                    var listName = $("#add-text").val();
+                    $.ajax({
+                    url:'includes/create-list-inc.php',
+                    method:'POST',
+                    data:{listName:listName},
+                    success:function(response){
+                        $(".lists").html(response);
+                        $(".add-list-form").hide();
+                    }
+                });
+                }
+            }, ".add-button");
+
+        $(document).on({
+                keyup: function(e){
+                    var code = e.which;
+                    if(code == 13){
+                        var listName = $("#add-text").val();
+                        e.preventDefault();
+                        $.ajax({  
+                            url:'includes/create-list-inc.php',
+                            method:'POST',
+                            data:{listName:listName},
+                            success:function(response){
+                                $(".lists").html(response);
+                                $(".add-list-form").hide();
+                            }
+                        });
+                    }
+                }
+            }, "#add-text");
+
+        $(document).on({
+                click: function(){
+                    var listId = $(this).val();
+                    $.ajax({
+                    url:'includes/remove-list.php',
+                    method:'POST',
+                    data:{listId:listId},
+                    success:function(response){
+                        $(".lists").html(response);
+                    }
+                });
+                }
+            }, ".remove");
+
     });
 </script>
 <?php

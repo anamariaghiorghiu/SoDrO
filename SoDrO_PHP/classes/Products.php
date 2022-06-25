@@ -21,7 +21,7 @@ class Products extends DatabaseHandler {
 		return $results;
 	}
 
-	protected function getByFilters($categories, $price, $availability, $restrictions){
+	protected function getByFilters($categories, $price, $availability, $restrictions, $search){
 
 		$ok=0;
 		$count=0;
@@ -39,6 +39,10 @@ class Products extends DatabaseHandler {
 		else if($restrictions != null){
 			$sql="SELECT * FROM products WHERE NOT (restrictions LIKE ?";
 			$ok=4;
+		}
+		else if($search != null){
+			$sql = "SELECT * from products WHERE lower(name) LIKE ?";
+			$ok=5;
 		}
 		else{
 			$sql = "SELECT * from products;";
@@ -96,6 +100,10 @@ class Products extends DatabaseHandler {
 				}
 			}
 			$sql.=')';
+		}
+
+		if($search != null && $ok!=5){
+				$sql.=" AND (lower(name) LIKE ?)";
 		}
 
 		$stmt = $this->connect()->prepare($sql);
@@ -160,9 +168,55 @@ class Products extends DatabaseHandler {
 			}
 		}
 
+		if($search != null){
+			$stmt->bindValue($count+1, $search.'%', PDO::PARAM_STR);
+		}
+
 		$stmt->execute();
 		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		return $results;
 	}
+
+	protected function getCountByCategory($categories){
+		$sql="SELECT count(*) AS count FROM products JOIN drinkslistitems ON products.id=drinkslistitems.productsId WHERE products.categories = ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $categories, PDO::PARAM_STR);
+		$stmt->execute();
+
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+	protected function getCountByPrice($price1, $price2){
+		$sql="SELECT count(*) AS count FROM products JOIN drinkslistitems ON products.id=drinkslistitems.productsId WHERE products.price BETWEEN ? AND ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, $price1, PDO::PARAM_INT);
+		$stmt->bindValue(2, $price2, PDO::PARAM_INT);
+		$stmt->execute();
+
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+	protected function getCountByAvailability($availability){
+		$sql="SELECT count(*) AS count FROM products JOIN drinkslistitems ON products.id=drinkslistitems.productsId WHERE products.availability LIKE ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, '%'.$availability.'%', PDO::PARAM_STR);
+		$stmt->execute();
+
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
+	protected function getCountByRestrictions($restrictions){
+		$sql="SELECT count(*) AS count FROM products JOIN drinkslistitems ON products.id=drinkslistitems.productsId WHERE products.restrictions LIKE ?;";
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->bindValue(1, '%'.$restrictions.'%', PDO::PARAM_STR);
+		$stmt->execute();
+
+		$results = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $results;
+	}
+
 
 }
