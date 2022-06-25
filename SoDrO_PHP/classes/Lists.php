@@ -3,7 +3,7 @@
 class Lists extends DatabaseHandler {
 
 	protected function insertList($name, $userId){
-		$sql="INSERT INTO drinksList (name, counter, createdAt, userId) values (?, 0, ?, ?);";
+		$sql="INSERT INTO drinksList (name, createdAt, userId) values (?, ?, ?);";
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->bindValue(1, $name, PDO::PARAM_STR);
 		$stmt->bindValue(2, date('Y-m-d H:i:s'));
@@ -64,7 +64,6 @@ class Lists extends DatabaseHandler {
 		products.imageSrc as imageSrc,
 		drinksList.id as listId,
 		drinksList.name as listName,
-		drinksList.counter as counter,
 		drinksList.createdAt as createdAt
 		FROM products JOIN drinkslistitems on products.id = drinkslistitems.productsid
 		JOIN drinkslist on drinkslistitems.drinksListId = drinkslist.id
