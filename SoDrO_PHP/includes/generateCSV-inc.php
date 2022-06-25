@@ -1,40 +1,34 @@
 <?php
 
+    include "../classes/DatabaseHandler.php";
+    include "../classes/Products.php";
+    include "../classes/ProductsView.php";
+
 if(isset($_POST['action'])){
 	
 	$productsView = new ProductsView();
 
-    $acidic = $productsView->getProductsCountByCategory("Acidic");
-    $alcoholic = $productsView->getProductsCountByCategory("Alcoholic");
-    $dairy = $productsView->getProductsCountByCategory("Dairy");
-    $coffee = $productsView->getProductsCountByCategory("Coffee");
-    $energy = $productsView->getProductsCountByCategory("Energy");
-    $natural = $productsView->getProductsCountByCategory("Natural");
-    $syrups = $productsView->getProductsCountByCategory("Syrups");
-    $teas = $productsView->getProductsCountByCategory("Teas");
-    $waters = $productsView->getProductsCountByCategory("Water");
+    $result = $productsView->getAllProducts();
+    $delimiter = ",";
+    $filename = "export".".csv";
 
-    $priceRange1 = $productsView->getProductsCountByPrice(0,5);
-    $priceRange2 = $productsView->getProductsCountByPrice(5,10);
-    $priceRange3 = $productsView->getProductsCountByPrice(10,20);
-    $priceRange4 = $productsView->getProductsCountByPrice(20,30);
-    $priceRange5 = $productsView->getProductsCountByPrice(30,40);
-    $priceRange6 = $productsView->getProductsCountByPrice(40,50);
-    $priceRange7 = $productsView->getProductsCountByPrice(50,10000);
+    $f = fopen('../export.csv', 'w');
 
-    $carrefour = $productsView->getProductsCountByAvailability("Carrefour");
-    $flux = $productsView->getProductsCountByAvailability("Flux");
-    $kaufland = $productsView->getProductsCountByAvailability("Kaufland");
-    $lidl = $productsView->getProductsCountByAvailability("Lidl");
-    $megaImage = $productsView->getProductsCountByAvailability("Mega Image");
-    $profi = $productsView->getProductsCountByAvailability("Profi");
+    $fields = array('ID', 'NAME', 'PRICE', 'QUANTITY', 'CATEGORIES', 'INGREDIENTS', 'RESTRICTIONS', 'AVAILABILITY', 'IMAGE SOURCE');
+    fputcsv($f, $fields, $delimiter);
 
-    $dairyAlergen = $productsView->getProductsCountByRestrictions("Dairy");
-    $nuts = $productsView->getProductsCountByRestrictions("Nuts");
-    $soybeans = $productsView->getProductsCountByRestrictions("Soybeans");
-    $sugar = $productsView->getProductsCountByRestrictions("Sugar");
-    $wheat = $productsView->getProductsCountByRestrictions("Wheat");
+    for($i=0;$i<count($result);$i++){
+        $lineData = array($result[$i]['id'], $result[$i]['name'], $result[$i]['price'], $result[$i]['quantity'], $result[$i]['categories'], $result[$i]['ingredients'], json_encode($result[$i]['restrictions']), json_encode($result[$i]['availability']), $result[$i]['imageSrc']);
+        fputcsv($f, $lineData, $delimiter);
+    }
+
+    fseek($f,0);
+
+    header("Content-Type: text/csv");
+    header("Content-Disposition: attachment; filename='".$filename."';");
+
 }
 else{
-	echo "nah";
+	header("location: ../homepageLogin.php?error=restrictedAcces");
+    exit();
 }
