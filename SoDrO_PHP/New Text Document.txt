@@ -1,0 +1,29 @@
+DROP TABLE users
+DROP TABLE products
+DROP TABLE drinksList
+DROP TABLE drinksListItems
+CREATE TABLE users(
+    usersId int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    usersName varchar(128) NOT NULL,
+    usersEmail varchar(128) NOT NULL,
+    usersUid varchar(128) NOT NULL,
+    usersBio text NOT NULL,
+    usersPwd varchar(128) NOT NULL
+);
+CREATE TABLE products(
+    id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name varchar(128) NOT NULL,
+    price float(5) NOT NULL,
+    quantity float(5) NOT NULL,
+    categories varchar(256) NOT NULL,
+    ingredients text NOT NULL,
+    restrictions varchar(256) NOT NULL,
+    availability varchar(256) NOT NULL,
+    imageSrc varchar(256) NOT NULL
+);
+CREATE TABLE drinksList(
+    id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name varchar(256) NOT NULL,
+    createdAt date NOT NULL,
+    userId int(11) NOT NULL
+);

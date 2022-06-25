@@ -95,7 +95,7 @@
                                 <li>Alcoholic: <span>".$alcoholic['count']."</span></li>
                                 <li>Dairy: <span>".$dairy['count']."</span></li>
                                 <li>Coffee: <span>".$coffee['count']."</span></li>
-                                <li>Enery Drinks: <span>".$energy['count']."</span></li>
+                                <li>Energy Drinks: <span>".$energy['count']."</span></li>
                                 <li>Natural Drinks: <span>".$natural['count']."</span></li>
                                 <li>Syrups: <span>".$syrups['count']."</span></li>
                                 <li>Teas: <span>".$teas['count']."</span></li>
@@ -115,15 +115,15 @@
                                 <li>Flux: <span>".$flux['count']."</span></li>
                                 <li>Kaufland: <span>".$kaufland['count']."</span></li>
                                 <li>idl: <span>".$lidl['count']."</span></li>
-                                <li>Mega Image: Drinks <span>".$megaImage['count']."</span></li>
-                                <li>Profi: Drinks <span>".$profi['count']."</span></li>";
+                                <li>Mega Image: <span>".$megaImage['count']."</span></li>
+                                <li>Profi: <span>".$profi['count']."</span></li>";
                             }
                             else if($_GET['chart'] == 'restrictions'){
                             echo "<li>Dairy: <span>".$dairyAlergen['count']."</span></li>
                                 <li>Nuts: <span>".$nuts['count']."</span></li>
                                 <li>Soybeans: <span>".$soybeans['count']."</span></li>
                                 <li>Sugar: <span>".$sugar['count']."</span></li>
-                                <li>Wheat: Drinks <span>".$wheat['count']."</span></li>";
+                                <li>Wheat: <span>".$wheat['count']."</span></li>";
                             }
                             ?>
                         </ul>

@@ -62,7 +62,7 @@
                                 <li>
                                     <input type='text' id='nr' name='nr' value='".$count['count']."' readonly>
                                     <button class='minus-button' value='".$listItemsId['id']."'> - </button>
-                                    <button class='plus-button'value='".$listItemsId['id']."'> + </button>
+                                    <button class='plus-button'value='".$result[$i]['productId']."'> + </button>
                                 </li>
                             </ul>
                         </div>
@@ -82,7 +82,6 @@
 
             $(document).on({
                 click: function(){
-                    //alert("yay");
                     $("#nameOfTheList").removeAttr("readonly");
                     readOnly=false;
                     oldVal = $("input:text#nameOfTheList").val();
@@ -131,7 +130,6 @@
                 keyup: function(e){
                     var code = e.which;
                     if(code == 13){
-                        
                         //e.preventDefault();
                         var listId = $(this).val();
                         var newListName = $("input:text#nameOfTheList").val();
@@ -160,7 +158,6 @@
             $(document).on({
                 click: function(){
                     var listItemsId = $(this).val();
-                    //alert(listId);
                     const queryString = window.location.search;
                     const urlParams = new URLSearchParams(queryString);
                     const listId = urlParams.get('id');
@@ -177,18 +174,20 @@
 
             $(document).on({
                 click: function(){
-                    var listId = $(this).val();
+                    var productId = $(this).val();
+                    const queryString = window.location.search;
+                    const urlParams = new URLSearchParams(queryString);
+                    const listId = urlParams.get('id');
                     $.ajax({
-                        url:'includes/remove-list-item-inc.php',
+                        url:'includes/add-list-item-inc.php',
                         method:'POST',
-                        data:{listId:listId},
+                        data:{listId:listId, productId:productId},
                         success:function(response){
                             $(".background").html(response);
-                           // alert('response');
                         }
                     });
                 }
-            }, ".minus-button");
+            }, ".plus-button");
 
         });
     </script>

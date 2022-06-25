@@ -32,7 +32,7 @@
 			<div class="statistics">
 				<h4> <i> Statistics </i> </h4>
 				<ul class="questions">
-					<li><a href='statisticPage.php?chart=category'>What type of drinks people prefer?</a> </li>
+					<li><a href='statisticPage.php?chart=category'>What type of drinks do people prefer?</a> </li>
 					<hr/>
 					<li><a href='statisticPage.php?chart=price'>What prices attract people the most?</a> </li>
 					<hr/>
