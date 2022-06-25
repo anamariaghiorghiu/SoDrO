@@ -1322,6 +1322,7 @@ textarea {
 }
 
 /* homepage login */
+
 .homepageContent{
     background-color: #333533;
 	width: 100%;
@@ -1331,17 +1332,39 @@ textarea {
 	position: relative;
 	color: #F5CB5C;
 }
+
+.top{
+    position: relative;
+}
+.generateCSV{
+    background-color: #F5CB5C;
+    color: #242423;
+    border-radius: 25px;
+    font-size: 3vh;
+    height: 5vh;
+    width: 17vw;
+    border: none;
+}
+.generateCSV:hover{
+    color: white;
+}
+.buttonCSV{
+    margin-left: 70vw;  
+    padding-bottom: 1vh;
+    position: relative;
+}
 .homepageContent h2{
+    position: relative;
 	margin-left: 10px;
 	font-size: 4vw;
 	font-weight: 800;
 	margin-bottom: -2vh;
 }
 .homepageContent h3{
+    position: relative;
 	margin-left: 10px;
  	font-size: 3vw;
  	font-weight: 800;
-    margin-bottom: 2vh;
 }
 .weeklyRankingAndStatistics{
     column-count: 2;
@@ -1429,8 +1452,17 @@ textarea {
 }
 
 @media screen and (max-width: 950px) {
+    .buttonCSV{
+        margin-left: 50vw;
+    }
     .homepageContent{
         height: 85vh;
+    }
+    .generateCSV{
+        width: 30vh;
+    }
+    .buttonCSV{     
+        margin-left: 55vw;  
     }
     .weeklyRankingAndStatistics{
         column-count: 1;
@@ -1471,7 +1503,15 @@ textarea {
         display: none;
     }
 }
-
+@media screen and (max-width: 550px) {
+    .buttonCSV{
+        margin-left: 40vw;
+    }
+    .generateCSV{
+        height: 4vh;
+        width: 50vw;
+    }
+}
 @media screen and (max-height: 650px) {
     .homepageContent {
         height: 90vh;
@@ -1485,7 +1525,6 @@ textarea {
         margin-bottom: 1vh;
     }
 }
-
 
 
 /********************************************************/
