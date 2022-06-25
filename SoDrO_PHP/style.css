@@ -2072,3 +2072,151 @@ textarea {
 	padding: 0.5em;
 	border-left: 1.5em solid black;
   }
+
+.viewListContent h3{
+	padding-bottom: 20px;
+  }
+  .viewListContent{
+	background-color: #333533;
+	width: 100%;
+	height: 75vh;
+	overflow: auto;
+	font-family: "Open Sans", sans-serif;
+	position: relative;
+	color: #F5CB5C;
+  }
+  .viewListContent .background{
+	min-height: 350px;
+  }
+  .viewListContent h9{
+	font-size: 27px;
+	color: #f5cb5c;
+	font-weight: 700;
+	padding-left: 10px;
+  }
+  .viewListContent h10{
+	font-size: 25px;
+	color: #f5cb5c;
+	font-weight: 500;
+	padding-left: 5px;
+  }
+  .viewListContent h11{
+	font-size: 30px;
+	color: #f5cb5c;
+	font-weight: 700;
+	padding-left: 10px;
+  }
+  .viewListContent button{
+	font-size: 25px;
+	background-color: #F5CB5C;
+	font-weight: 500;
+	padding-left: 5px;
+	max-width: max-content;
+	border-radius: 25px;
+	width: 100px;
+	color: #242423;
+  }
+  #nameOfTheList{
+	background-color: transparent;
+	font-size: 25px;
+	color: #f5cb5c;
+	font-weight: 500;
+	padding-left: 5px;
+	max-width: max-content;
+	border-radius: 25px;
+	width: max-content;
+	height: 60px;
+  }
+  .viewListContent .background{
+	overflow: hidden;
+	margin-bottom: 10px;
+  }
+  .viewListContent .list{
+	margin: 1vw;
+	max-width: 85vw;
+	width: 100%;
+	min-width: 340px;
+	min-height: 300px;
+	flex-direction: column;
+	display: inline-flex;
+	justify-content:flex-start;
+	background-color: #555;
+	border-radius: 25px;
+	padding: 8px;
+	overflow: auto;
+	position: relative;
+  }
+  .viewListContent .imageBackground{
+	margin-left: 10px;
+
+}
+.viewListContent .infoList{
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-content: center;
+	position: relative;
+}
+.product-numbers{
+	padding-top: 50px;
+}
+
+.product-numbers button{
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 25px;
+	height: 60px;
+	
+	align-items: center;
+	vertical-align: center;
+	border-radius: 10px;
+	padding: 2vw;
+	text-align: center;
+	position: relative;
+	border: none;
+}
+
+.viewListContent .add-button{
+	color: #242423;
+	background-color: #F5CB5C;
+
+}
+
+.viewListContent .add-button:hover{
+	color: white;
+}
+
+.viewListContent .quantity{
+	background-color: #242423;
+	color: #F5CB5C;
+} 
+.listDisplay{
+	display: flex;
+	justify-content:space-between;
+}
+
+@media screen and (max-width:1000px) {
+	.listDisplay{
+		display: block;
+		justify-content:space-between;
+	}
+}
+#nr{
+	background-color: transparent;
+	font-size: 20px;
+	color: #f5cb5c;
+	font-weight: 500;
+	border-radius: 15px;
+	height: 60px;
+	align-items: center;
+	vertical-align: center;
+	border-radius: 10px;
+	padding: 2vw;
+	text-align: center;
+	position: relative;
+	width: 85px;
+	padding-bottom: 5px;
+
+}

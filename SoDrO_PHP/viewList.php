@@ -1,58 +1,68 @@
 <?php
  include_once 'header.php';
 ?>
-	<div class="viewListContent">
-		<h2>Soft Drink Organizer</h2>
-		<h3>a sip of ingeniosity.</h3>
-		<div class="info-and-content">
-			<div class="list-info">
-					<div id="list-name"><input type="text" value="TW AfterParty" readonly>
-						<button id="edit-button">Edit</button>
-					<h5> <b> Created on: </b> 24/06/2022 <br/> <b> Number of products: </b> 0 </h5>
-			</div>
-			<div class="content-table">
-				<table class="list-content">
-					<tr> 
-						<td>
-							<div class="product-frame">
-								<img src="images/drinks/borsec.jpg" alt="borsec">
-							</div>
-						</td>
-						<td>
-							<div class="product-description">
-								<div class="product-info">
-									<ul>
-										<li class="product-name"> Apa plata </li>
-										<li> Pret: 2.25 lei </li>
-										<li> 0.5L </li>
-									</ul>
-								</div>
-								<div class="product-numbers">
-									<ul>
-										<li>
-											<button class="quantity"> 2 </button>
-											<button class="add-button"> - </button>
-											<button class="add-button"> + </button>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</div>
-	<script>
-		$(document).ready(function(){
-
-			$("#edit-button").click(function(){
-				
-			});
-
-		});
-	</script>
-
-<?php
+<div class="viewListContent">
+        <h2>Soft Drinks Organizer</h2>
+        <h3>a sip of ingeniosity.</h3>
+        <div class="replaceName">
+            <ul>
+                <li> <h9>Name of list:</h9><h10> <input type="text" id="nameOfTheList" name="nameOfTheList" value="scris"></h10> <button id="editName">Edit</button></li>
+                <li> <h9>Created on:</h9><h10>scris</h10></li>
+                <li> <h9>Products in list:</h9><h10>scris</h10></li>
+            </ul>
+        </div>
+        <div class="background">
+            <div class="list">
+                <h11>Product Name:<h11>scris</h10></h9>
+                <div class="listDisplay">
+                    <div class="infoList">
+                        <div class="imageBackground">
+                            <img src="images/drinks/borsec.jpg" alt="pic" id="pic" class="pic">
+                        </div>
+                        <ul class="data">
+                                <li><h9>Quantity:</h9><h10>scris</h10></li>
+                                <li><h9>Price:</h9><h10>scris</h10></li>
+                        </ul>
+                    </div>
+                    <div class="product-numbers">
+                        <ul>
+                            <li>
+                                <input type="text" id="nr" name="nr" value="nr">
+                                <button class="add-button"> - </button>
+                                <button class="add-button"> + </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="list">
+                <h11>Product Name:<h11>scris</h10></h9>
+                <div class="listDisplay">
+                    <div class="infoList">
+                        <div class="imageBackground">
+                            <img src="images/drinks/borsec.jpg" alt="pic" id="pic" class="pic">
+                        </div>
+                        <ul class="data">
+                                <li><h9>Quantity:</h9><h10>scris</h10></li>
+                                <li><h9>Price:</h9><h10>scris</h10></li>
+                        </ul>
+                    </div>
+                    <div class="product-numbers">
+                        <ul>
+                            <li>
+                                <input type="text" id="nr" name="nr" value="nr">
+                                <button class="add-button"> - </button>
+                                <button class="add-button"> + </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <?php
  include_once 'footer.php';
 ?>
