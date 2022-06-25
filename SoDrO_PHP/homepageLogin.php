@@ -7,7 +7,9 @@
 				<h2>Soft Drink Organizer</h2>
 				<h3>a sip of ingeniosity.</h3>
 				<div class="buttonCSV">
-					<button class="generateCSV">Generate CSV</button>
+					<form method="post" action="includes/generateCSV-inc.php">
+					<button class="generateCSV" name="action">Generate CSV</button>
+					</form>
 				</div>
 		</div>
 		<div class="weeklyRankingAndStatistics">
@@ -45,7 +47,7 @@
 	</div>
 
 	<script>
-
+/*
 		$(document).ready(function(){
 			$(document).on({
                 click: function(){
@@ -55,13 +57,12 @@
                     method:'POST',
                     data:{action:action},
                     success:function(response){
-                    	alert(response);
                     }
                 });
                 }
             }, ".generateCSV");
 		});
-
+*/
 	</script>
 
 <?php
